@@ -1,0 +1,51 @@
+
+{
+  tokens = [
+      INCREMENT="+"
+      DECREMENT="-"
+      DECREMENT_PTR="<"
+      INCREMENT_PTR=">"
+      INPUT=","
+      OUTPUT="."
+      LBRACK="["
+      RBRACK="]"                           
+      COMMENT='regexp:[^,.<>+\-\[\]]+'
+      space='regexp:\s+'
+  ]
+  
+  
+  parserClass="org.cschoell.brainfuck.BrainfuckParser"
+  parserUtilClass="org.cschoell.brainfuck.BrainfuckParserUtil"
+
+//  implements="com.intellij.psi.StubBasedPsiElement<org.cschoell.brainfuck.psi.empty.stub.QikEmptyStub>"
+
+  psiClassPrefix="Brainfuck"
+  psiImplClassSuffix="Impl"
+  psiPackage="org.cschoell.brainfuck.psi"
+  psiImplPackage="org.cschoell.brainfuck.psi.impl"
+
+  elementTypeClass="org.cschoell.brainfuck.psi.BrainfuckElementType"
+  elementTypeHolderClass="org.cschoell.brainfuck.psi.BrainfuckTypes"
+  tokenTypeClass="org.cschoell.brainfuck.psi.BrainfuckTokenType"    
+
+
+  generateTokenAccessors=true
+  
+
+}
+
+file ::= (item)*
+
+
+item ::= expression|COMMENT
+expression ::= loop_expr|pointer_expr|value_expr|io_expr
+
+loop_expr ::= LBRACK (item)* RBRACK   
+
+pointer_expr ::= (INCREMENT_PTR|DECREMENT_PTR) 
+value_expr ::= (INCREMENT|DECREMENT)
+io_expr ::= (INPUT|OUTPUT) 
+
+
+
+

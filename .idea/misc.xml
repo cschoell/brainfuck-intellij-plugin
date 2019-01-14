@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AliProjectConfiguration">
+    <location />
+    <domain />
+    <project />
+    <username />
+    <password />
+    <store-password>true</store-password>
+    <stored />
+    <status-transition />
+    <spell-checker>true</spell-checker>
+    <dev-motive-annotation>true</dev-motive-annotation>
+    <entity />
+    <CommentHistory>
+      <option name="comments">
+        <list />
+      </option>
+    </CommentHistory>
+    <details controls="false" />
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="IntelliJ IDEA Community Edition IC-182.4323.46" project-jdk-type="IDEA JDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>
